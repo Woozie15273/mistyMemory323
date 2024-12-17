@@ -2,6 +2,10 @@ Preview: https://woozie15273.github.io/mistyMemory323/
 
 Trigger when the timeline starts on thePalette Helper layer. Otherwise, it won't find the elements in hidden div tags.
 
+Bonus: 
+
+How to change icon png color using only PowerPoint -> import graphic -> Select graphic -> Picture Format -> Adjust -> Color -> More variations -> More colors
+
 ```
 const player = GetPlayer();
 
