@@ -51,6 +51,9 @@ const addCopyListenersToElements = (modelIds) => {
             element.addEventListener('click', () => {
                 copyAriaLabelContent(modelId);
             });
+            element.addEventListener('touchstart', () => {
+                copyAriaLabelContent(modelId);
+            });
             element.dataset.listenerAdded = 'true';
         } else if (!element) {
             console.error(`Element with data-model-id="${modelId}" not found`);
