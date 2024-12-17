@@ -37,7 +37,7 @@ const copyAriaLabelContent = (modelId) => {
     }
 };
 
-// Function to add click event listeners to elements
+// Function to add click and touchscreen event listeners to elements
 const addCopyListenersToElements = (modelIds) => {
     modelIds.forEach(modelId => {
         const element = document.querySelector(`[data-model-id="${modelId}"]`);
@@ -46,6 +46,9 @@ const addCopyListenersToElements = (modelIds) => {
             element.setAttribute('role', 'button');
             element.style.cursor = 'pointer';
             element.addEventListener('click', () => {
+                copyAriaLabelContent(modelId);
+            });
+            element.addEventListener('touchstart', () => {
                 copyAriaLabelContent(modelId);
             });
             element.dataset.listenerAdded = 'true';
